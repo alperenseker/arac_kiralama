@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Araç Kiralama</title>
+<meta charset="UTF-8" />
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+	    font-family: ""Lucida Console", Monaco, monospace";
+        height: 1000px;
+        background-color:;
+    }
+    h3{
+        color: #263238;
+        padding: 8px 8px 8px 8px;
+        
+        
+    }
+    td {
+        border: none;
+    }   
+    .btn{
+        width: 100%;
+        height: 105px;
+		background:#062e51;
+        font-family: 'Montserrat';
+  		padding:15px 20px 15px 20px;
+  		font-size:12px;
+  		text-decoration:none;	
+		opacity:0.9;
+    	transition: opacity .3s ease-in-out;
+   	    cursor: pointer;
+        font-size: 15px;
+	}
+    .btn:hover{
+		background:#062e51;
+		color:white;
+		opacity:1;
+  		text-decoration:none;	
+	}
+    input[type=text],input[type=date],input[type=number], select {
+        width: 100%;
+	   box-sizing: border-box;
+	   -webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	   border:1px solid #BEBEBE;
+	   padding: 7px;
+	   margin:0px;
+	   -webkit-transition: all 0.30s ease-in-out;
+	   -moz-transition: all 0.30s ease-in-out;
+	   -ms-transition: all 0.30s ease-in-out;
+	   -o-transition: all 0.30s ease-in-out;
+	   outline: none;	
+    }
+    input[type=text]:focus,input[type=date]:focus,input[type=number]:focus, select:focus {
+       width: 100%;
+	   -moz-box-shadow: 0 0 8px #88D5E9;
+	   -webkit-box-shadow: 0 0 8px #88D5E9;
+	   box-shadow: 0 0 8px #88D5E9;
+	   border: 1px solid #88D5E9;	
+    }
+    #kiralama{
+        color: #d5d8e0;
+        text-align: center;
+        margin: 2% 10% 10% 10%;
+        width: 80%;
+        height: 710px;
+        background-color:#5d6c88;
+         -moz-border-radius: 16px;
+        -webkit-border-radius: 16px;
+        border-radius: 16px;
+	    -moz-box-shadow: 0px 0px 70px;
+        -webkit-box-shadow: 0px 0px 10px ;
+        box-shadow: 0px 0px 10px;  
+        letter-spacing:2px;
+        cursor: pointer;
+	    font-family:font-family: 'Montserrat';
+	    font-size:16px;
+        
+        
+    }
+	#supp{
+		margin:-75px 20px auto ;		
+		width:100%;		
+   	    position: relative;			
+    }
+</style>
+</head>
+<body>
+<script language="javascript">
+ 
+function uyari(){
+ 
+    alert("Mesajınız Gönderilmiştir.");
+ 
+}
+ 
+</script>
+
+  <div class="kiralama" id="kiralama" >
+        <form action="kaydet.php" id="form" name="form" method="POST">
+            <table border='1' align="center">
+                <tr>
+                    <td colspan="10"><div align="center"><h3>Araç Listesi</h3></div></td>
+                </tr>
+                <tr>
+                    <td><p>Renault Symbol <br> 2016 - Dizel <br> Günlük:150₺</p></td>
+                    <td><p>Lamborghini Urus <br> 2020 - Benzin <br> Günlük:1.500₺</p></td>
+                    <td><p>Opel Corsa <br> 2019 - Lpg <br> Günlük:200₺</p></td>
+                    <td><p>Volkswagen Touareg <br>2020 - Benzin <br> Günlük:750₺</p></td>
+                    <td><p>Renault Egea <br> 2019 - Dizel <br> Günlük:250₺</p></td>
+                    <td><p>Renault Megane <br> 2016 - Dizel <br> Günlük:125₺</p></td>
+                    <td><p>Renault Symbol <br> 2016 - Dizel <br> Günlük:250₺</p></td>
+                    <td><p>Renault Symbol <br> 2015 - Dizel <br> Günlük:200₺</p></td>
+                    <td><p>Renault Symbol <br> 2013 - Dizel <br> Günlük:150₺</p></td>
+                    <td><p>Renault Symbol <br> 2018 - Dizel <br> Günlük:300₺</p></td>
+                </tr>
+
+
+	           <tr>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="1" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="2" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="3" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="4" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="5" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="6" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="7" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="8" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="9" /></td>
+                    <td><input type="radio" name="asecimi" id="asecimi" value="10" /></td>
+            </tr>
+
+                
+                
+                    
+                   <tr>
+                    <td></td><td></td><td></td>      
+                    <td colspan="4"><div align="center"><h3>Ek Hizmet Paketleri</h3></div></td>
+                    <td></td><td></td><td></td>      
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><p>Ek hizmet <br>istemiyorum</p></td>
+                    <td><p>Navigasyon cihazı<br> Fiyat:50₺</p></td>
+                    <td><p>Bebek koltuğu <br>Fiyat:100₺</p></td>
+                    <td><p>Kaza ve sağlık sigortası<br> Fiyat:200₺</p></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+	           <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="radio" name="ekhizm" id="ekhizm" value="1" /></td>
+                    <td><input type="radio" name="ekhizm" id="ekhizm" value="1" /></td>
+                    <td><input type="radio" name="ekhizm" id="ekhizm" value="2" /></td>
+                    <td><input type="radio" name="ekhizm" id="ekhizm" value="3" /></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+            </tr>             
+              </table>  
+                           
+            
+            
+            
+            <table border=2 style="float: left;width: 50%;">
+                <tr>
+                    <td colspan="2" ><h3>Müşteri Bilgileri</h3></td>
+ 
+                </tr>
+                <tr>
+                    <td>id:</td>
+                    <td><input type="number" id="" name="id"></td>
+                </tr>                
+                <tr>
+                    <td>Ad:</td>
+                    <td><input type="text" style=";" class="" name="adi" id="" placeholder="İsim" /></td>
+                </tr>
+                <tr>
+                    <td>Soyad:</td>
+                    <td><input type="text" style=";" class="" name="sadi" id="" placeholder="Soyad" /></td>
+                </tr>
+                <tr>
+                    <td>Adres:</td>
+                    <td><textarea name="message" id="" class="" rows="4" style="width: 100%;"placeholder="Adres..."></textarea></td>
+                </tr>
+                <tr>
+                    <td>Doğum Tarihi:</td>
+                    <td><input type="date" id="" class="" name="dtarihi"></td>
+                </tr>
+                 <tr>
+                    <td>E-Posta:</td>
+                    <td><input type="text" id="" class="" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Telefon:</td>
+                    <td><input type="text" id="" name="tel" ></td>
+                </tr>
+                  <tr>
+                    <td>Ehliyet Alım Tarihi:</td>
+                    <td><input type="date" id="" class="" name="ealimtarihi"></td>
+                </tr>  
+                    <tr>
+                    <td>Ehliyet No:</td>
+                    <td><input type="text" id="" name="ehliyetno" ></td>
+                </tr>            
+                <tr>
+                    <td>TC Kimlik No:</td>
+                    <td><input type="number" id="" name="tcno" ></td>
+                </tr>         
+                <tr>
+                    <td>İl Plaka No:</td>
+                    <td><input type="number" id="" name="ilplakano"></td>
+                </tr>                         
+            </table>
+
+            
+            
+
+                
+                
+            <table border=2 style="width: 50%;">
+                <tr>
+                    <td colspan="2"><h3>Rezervasyon Bilgileri</h3></td>
+ 
+                </tr>
+                <tr>
+                    <td>Alım Tarihi:</td>
+                    <td><input type="date" id="" class="" name="alimtrhi"></td>
+                </tr>
+                 <tr>
+                    <td>Teslim Tarihi:</td>
+                    <td><input type="date" id="" class="" name="teslimtrhi"></td>
+                </tr>
+                <tr>
+                    <td>Alınacak Firma:</td>
+                    <td><select name="afirma" id="">
+                            <option value="0" selected="selected">Seçiniz</option>
+                            <option value="1">Vınn Rent A Car , İstanbul</option>
+                            <option value="2">Garenta Rent A Car, Ankara</option>
+                            <option value="3">Avis Rent A Car , İzmir</option>
+                            <option value="4">Budget Rent A Car , Balıkesir</option>
+                            <option value="5">Yolcu360 Rent A Car , Bursa</option>                  
+                </select></td>
+                </tr>
+                  <tr>
+                    <td>Teslim Edilecek Şube:</td>
+                    <td><select name="vsube" id="">
+                            <option value="0" selected="selected">Seçiniz</option>
+                            <option value="1">Merkez Şube</option>
+                            <option value="2">İlçe Şubesi</option>
+                </select></td>
+                </tr>  
+                <tr>
+                    <td>Görevlendirilen Personel:</td>
+                    <td><select name="spersonel" id="">
+                            <option value="0" selected="selected">Seçiniz</option>
+                            <option value="1">Servet Akça</option>
+                            <option value="2">Nüket Aksan</option>
+                            <option value="3">Bünyamin Tan</option>
+                            <option value="4">Nuran Turan</option>
+                            <option value="5">İlbey Bınar</option>
+                            <option value="6">Oğuzhan Yenidere</option>
+                            <option value="7">Çağrı Şeker</option>
+                            <option value="8">Servet Turan</option>   
+                            <option value="9">Ahmet Barkan</option>                         
+                            <option value="10">Furkan Türk</option>
+                </select></td>
+                </tr> 
+                <tr>
+                    <td>Rezervasyon Tipi:</td>
+                    <td><select name="rtipi" id="">
+                            <option value="0" selected="selected">Seçiniz</option>
+                            <option value="1">Yüzyüze</option>
+                            <option value="2">Telefon</option>
+                            <option value="3">İnternet</option>                        
+
+                </select></td>
+                </tr>                
+                
+             </table>
+            
+            <table border='2' align="center" style="width: 50%;" >
+                <tr>
+                    <td colspan="2" style="width: 10%;"><div align="center"><h3>Ödeme Tipi</h3></div></td>
+                </tr>
+                <tr>
+                    <td><p style="padding: 8px 8px 8px 8px;">Nakit</p></td>
+                    <td><p>Kredi Kartı</p></td>
+                </tr>
+	           <tr>
+                    <td><input type="radio" name="otipi" id="" value="1" /></td>
+                    <td><input type="radio" name="otipi" id="" value="2" /></td>
+
+            </tr>
+                <tr>
+                    <td><button type="reset" class="btn" >Temizle</button></td>  
+                    <td><button type="submit" class="btn" onClick="uyari()">Tamamla</button></td>
+            </tr>
+            </table>
+        </form>
+</div>
+</body>
+</html>
